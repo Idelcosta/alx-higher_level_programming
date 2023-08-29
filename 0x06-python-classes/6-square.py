@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-New class Square
+Class Square
 """
 
 
 class Square:
-    """ Definition of a Square """
+    """Definition of a Square """
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
@@ -29,19 +29,19 @@ class Square:
     @position.setter
     def position(self, value):
         if type(value) != tuple or len(value) != 2:
-            raise TypeError("position have to be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         if type(value[0]) != int or type(value[1]) != int:
-            raise TypeError("position have to be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         if value[0] < 0 or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
-        """ Definition of an area of square"""
+        """Definition of area of square"""
         return (self.__size ** 2)
 
     def my_print(self):
-        """ Prints in stdout the square with the character # """
+        """Prints in stdout the square with the character # """
         if self.size == 0:
             print("")
         else:
@@ -52,4 +52,4 @@ class Square:
                     print(" ", end="")
                 for j in range(self.size):
                     print("#", end="")
-                print("")
+                print(
